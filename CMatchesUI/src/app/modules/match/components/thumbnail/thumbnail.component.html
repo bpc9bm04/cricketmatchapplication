@@ -1,0 +1,21 @@
+
+<mat-card class="match-thumbnail">
+    <mat-card-header>
+        <mat-card-title *ngIf="!quickviewAPI">{{match.teamOne}} vs {{match.teamTwo}}</mat-card-title>
+        <mat-card-title *ngIf="quickviewAPI">{{match.name}}</mat-card-title>
+        <mat-card-subtitle>{{match.matchDate}}</mat-card-subtitle>
+        
+        
+    </mat-card-header>
+    
+    <mat-card-actions class="match-actions">
+        <!--*ngIf="!useWatchlistAPI"-->
+        <button mat-raised-button class="addButton" color="primary" *ngIf="!quickviewAPI && !favouriteAPI" (click)="addMatchToFavourite()">Add to 
+            Favourite</button>
+        <button mat-raised-button class="deleteButton" color="primary" *ngIf="favouriteAPI" (click)="deleteMatchFromFavouritelist()">Delete Match</button>
+        <button mat-raised-button [disabled]="viewDetails" class="detailsButton" color="primary" (click)="getMatchDetails()">View Match Details</button>
+        
+       
+    </mat-card-actions>
+</mat-card>
+

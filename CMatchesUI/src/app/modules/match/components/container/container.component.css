@@ -1,0 +1,12 @@
+:host{
+    height: 100vh;
+}
+.match-container{
+    margin:auto;
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    flex-direction: row;
+    overflow-x: auto;
+}

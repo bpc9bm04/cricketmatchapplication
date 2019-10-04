@@ -1,0 +1,7 @@
+<div class="match-container">
+  <match-thumbnail *ngFor="let match of matches" [match]="match" [quickviewAPI]="quickviewAPI" [favouriteAPI] ="favouriteAPI"
+   (addMatch)="addMatchToFavourite($event)" (deleteMatch)="deleteMatchFromFavouritelist($event)"></match-thumbnail>
+   
+
+  </div>
+
